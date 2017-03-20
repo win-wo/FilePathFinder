@@ -12,7 +12,6 @@ def main(argv):
         for name in files:
             for ext in argv[1:]:
                 if name.endswith(ext):
-                    #trim = len(ext)+1
                     name_trim = os.path.splitext(name)[0]
                     relative_directory = os.path.relpath(root, path)
                     relative_file_path = os.path.join(relative_directory, name_trim)
